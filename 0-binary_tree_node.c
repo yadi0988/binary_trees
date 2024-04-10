@@ -2,7 +2,10 @@
 #include <stdlib.h>
 
 /**
- *
+ * binary_tree_node - function
+ * @parent: ..........
+ * @value: .............
+ * Return: binary tree
  */
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
@@ -12,6 +15,9 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
     return NULL;
 
   new_node->n = value;
+  new_node->left = NULL;
+  new_node->right = NULL;
+
 
   if (parent == NULL)
     return new_node;
