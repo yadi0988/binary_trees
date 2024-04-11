@@ -3,18 +3,23 @@
 /**
  * binary_tree_leaves - function
  * @tree: ...........
- * @Return: ...........
+ * Return: ...........
  */
 
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
-  if (tree == NULL)
-    return (0);
+size_t leaf = 0;
 
-  if (!tree->left && !tree->right)
-    {
-      return (1);
-    }
+if (tree == NULL)
+return (0);
 
-  return (binary_tree_leaves(tree->left) + binary_tree_leaves(tree->right));
+if (!tree->right && !tree->left)
+{
+return (1);
+}
+
+leaf += binary_tree_leaves(tree->left);
+leaf += binary_tree_leaves(tree->right);
+
+return (leaf);
 }
