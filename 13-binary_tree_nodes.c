@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_leaves - function
+ * binary_tree_nodes - function
  * @tree: ...........
  * Return: ...........
  */
@@ -19,5 +19,5 @@ node++;
 node += binary_tree_nodes(tree->left);
 node += binary_tree_nodes(tree->right);
 
- return (node);
+return (node);
 }
